@@ -1,2 +1,3 @@
-const name = window.prompt("what is your name");
-console.log("Hello, " + name);
+console.log("Hello, World!");
+const human = window.prompt("what is your name?");
+document.write("Hey, " + human + "!");

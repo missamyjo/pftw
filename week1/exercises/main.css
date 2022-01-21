@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Bungee Shade"; sans-serif;
+    src: url('fonts/BungeeShade-Regular.ttf');
+}
+body {
+        font-family: "BungeeShade-Regular", sans-serif;
+    font-size: 400%;
+    text-align: center;
+        color: #cc6600;
+    border-bottom: 2px dotted #000000;
+    background-color: rgb(158, 200, 255);
+    color: rgb(0, 0, 0);
+    width: 80%;
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 2em 4em;
+}

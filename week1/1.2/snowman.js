@@ -1,10 +1,11 @@
 let grid = undefined;
-let stroke1 = prompt("what color lines? enter a basic color name in lower case", "black");
+let background1 = prompt("what color background? enter a basic color name in lower case", "lightblue");
+let stroke1 = prompt("what color outlines? pick a basic color in lower case", "black");
 let stroke2 = prompt("what color snow creature? pick a basic color in lower case", "red");
 
 function setup() {
     createCanvas(1000, 800);
-    background("lightblue");
+    background(background1);
     grid = loadImage("img/100px_grid.png");
 }
 function draw() {

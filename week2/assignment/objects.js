@@ -7,5 +7,5 @@ const myTrivia = [
 console.log(myTrivia);
 const randomQuestion = Math.floor(Math.random() * myTrivia.length);
 const answer = window.prompt(myTrivia[randomQuestion].question);
-window.alert('You answered ' + answer + '. The correct answer was ' + myTrivia[randomQuestion].answer + '.');
+window.alert('You answered ' + answer + '. The correct answer is ' + myTrivia[randomQuestion].answer + '.');
 

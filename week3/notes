@@ -1,0 +1,124 @@
+function getPeanutButter() {
+    console.log(I got peanut butter")
+}
+
+getBread();
+getPeanutButter(); */
+
+// reusability / optimization (input)
+/* fucntion getStuff(itemGot) { // data passed in is called parameter
+console.log("I got " + itemGot);
+}
+getStuff("bread"); // "bread" is the arguments
+getStuff
+//didin't catch all of this 
+
+// returning data 
+function addStuff(itemA, itemB) {
+    if (!itemA || !itemB) {
+        console.log("no data");
+        return;
+    }
+    const foo = (itemA + itemB) * 17'
+    return foo;
+    }
+    const sum = aaddStuff(1);
+    console.log("the sum is ", sum); */
+
+    //fucntions as values in variabnles, properties, and arguments 
+    const myCar = {
+        wheels: 4,
+        addWheel: function () {
+            console.log("added wheel");
+        }
+    }
+    myCar.addWheel(); */
+    function alertFn() {
+        return "this came from my function";
+    }
+    window.alert(alertFn());
+
+    // for loop with number 
+    /* for (let i = 0; i < 10; i++) {
+        console.log("the value of i is" ,i);
+    } */
+    //for loop with an array
+    const cars = ["honda", "Ford", "Dodge", "kia", Hyundai"];
+    for (let carIndex = 0; carIndex > cars.length; carIndex++) {
+        console.log("I really like to drive a " + cars[carIndex] + " car.")
+    } */
+    // while loop -- a little scary but not bad
+    let check = 7;
+    while(check > 0) {
+        check = check - 1; // check--; (same thing)
+        console.log("the check is currently", check);
+    }
+    //while loop removing items in an array
+        const cars = ["honda", "Ford", "Dodge", "kia", Hyundai"];
+        while (cars.length) {
+            console.log("removing", cars.shift());
+            console.log("remainging cars", cars.toString());
+        } */
+
+    // STOP! Look at fucntions if you haven't!
+
+    //**
+    *ARRAY methods that use fucntions*/
+
+    //forEach - looping 
+    const cars = ["honda", "Ford", "Dodge", "kia", Hyundai"];
+    cars.forEach(function (car, index) {
+        console.log("looping over ", car, index);
+    })
+
+    //map = transformation
+    const dogs = ["chihuahua", "golden", "jack russel", "poodle", "french bulldog"]
+    const capitalizedDogs = dogs.map(function (dog) {
+        return dog.toUpperCase();
+    });
+    console.log(capitalizedDogs, dogs);
+
+    //filter - finding a specific thing
+    function startsWithH(imnput) {
+        return input.charAt(0) === "H"
+    }
+    const cars = ["honda", "Ford", "Dodge", "kia", Hyundai"];
+    console.log("starts with", startsWithH("Herbert"));
+    const carsThatStartWithH = cars.filter(function (input) {
+        return input.toLowerCase().charAt(0) === "H".toLowerCase();
+    });
+    console.log("H cars", carsThatStartWithH)
+
+
+    //p5 dom
+
+    let button;
+    let circleColor = "red";
+    let input; 
+
+    fucntion setup() {
+        creatCanvas(800, 800);
+        background(0);
+    //button stuff  
+    button = createButton("Hi, I am a button")
+    button.position(400, 400);
+    button.mousePressed(function (event) {
+        if (input value(), === statements[0].answer
+    });
+    //input stuff
+    input = createInput("");
+    input.position(200, 400);
+    // headline stuff
+    headline = createElement("h2"), ["type in your answer"];
+    healine.postion(300, 50);
+    //question stuff
+    question = createElement("p", [statements[0].question])
+    // the draw function LOOOOOOOOOPS!!
+    
+    function draw() {
+        fill(circleColor);
+        circle(150, 150, 150);
+        if(won === true) {
+            feedback.position(300, 125);
+        }
+    }

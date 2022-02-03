@@ -4,22 +4,21 @@ function setup() {
 }
 function createTile() {
     translate(0, 0);
-    fill('blue');
+    fill('pink');
+    stroke('red');
+    strokeWeight(16);
     rect(0, 0, 200, 200);
-    stroke('white');
-    strokeWeight(5);
-    line(0, 0, 200, 200);
-    line(200, 0, 0, 200);
-    noStroke();
-    fill('yellow');
-    circle(100, 50, 50);
-    circle(50, 100, 50);
-    circle(150, 100, 50);
-    circle(100, 150, 50);
     noFill();
-    stroke('purple');
-    strokeWeight(5);
-    circle(100, 100, 100);
+    stroke('red');
+    strokeWeight(8);
+    rect(60, 5, 135, 120);
+    noFill();
+    stroke('red');
+    strokeWeight(8);
+    rect(4, 76, 135, 120);
+    fill('white');
+    noStroke;
+    rect(60, 76, 79, 50);
 }
 
 function draw() {

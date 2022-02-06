@@ -1,0 +1,28 @@
+let myRotation = 45;
+function setup() {
+createCanvas(600, 600);
+angle mode(DEGREES);
+background(220);
+}
+
+function draw() {
+translate(300, 300);
+rotate(myRotation);
+ellipse (0, 250, 100, 200);
+myRotation+=90;
+}
+
+//ken's code
+let myRotation = 45;
+function setup() {
+createCanvas(600, 600);
+  angleMode(DEGREES)
+    background(220);
+}
+
+function draw() {
+  translate(300, 300)
+  rotate(myRotation)
+  ellipse(0, 250, 100, 200);
+  myRotation+=90;
+}

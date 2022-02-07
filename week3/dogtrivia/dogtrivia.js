@@ -16,10 +16,6 @@ let statements = [
 
 ];
 function next() {
-    if (statements.length < 1) {
-        alert('Congratulations! You know your dogs!');
-        return;
-    }
     const randomIndex = Math.ceil(Math.random() * statements.length - 1);
     return statements[randomIndex];
 }

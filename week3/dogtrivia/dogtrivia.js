@@ -79,12 +79,12 @@ function draw() {
     background('lightgrey');
     fill('black');
     textSize(24);
-    text(message, 100, 180);
+    text(message, 210, 180);
     fill(responseColor);
-    text(response, 100, 300);
+    text(response, 210, 300);
     fill('black');
     textSize(16);
-    text('Right: ' + numRight + '     Wrong: ' + numWrong, 100, 335);
+    text('Right: ' + numRight + '     Wrong: ' + numWrong, 210, 335);
 }
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;

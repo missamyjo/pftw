@@ -68,27 +68,27 @@ function preload() {
 function setup() {
     createCanvas(800, 600);
     heading = createElement('h1', ['Famous Dog Trivia']);
-    heading.position(450, 100);
+    heading.position(345, 100);
     subHeading = createElement('h2', ['*hint: Capitalize names. ex: Lassie Come Home']);
-    subHeading.position(450, 400);
+    subHeading.position(345, 400);
     questionInput = createInput('');
-    questionInput.size(245, 24);
-    questionInput.position(450, 260);
+    questionInput.size(345, 24);
+    questionInput.position(345, 260);
     submitAnswerButton = createButton('submit answer');
     submitAnswerButton.size(110, 24);
     submitAnswerButton.mousePressed(checkQuestion);
-    submitAnswerButton.position(450, 300);
+    submitAnswerButton.position(345, 300);
 }
 function draw() {
     background('lightgrey');
     fill('black');
     textSize(24);
-    text(message, 200, 180);
+    text(message, 100, 180);
     fill(responseColor);
-    text(response, 200, 300);
+    text(response, 100, 300);
     fill('black');
     textSize(16);
-    text('Right: ' + numRight + '     Wrong: ' + numWrong, 205, 335);
+    text('Right: ' + numRight + '     Wrong: ' + numWrong, 100, 335);
 }
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;

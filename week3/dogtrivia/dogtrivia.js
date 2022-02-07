@@ -4,6 +4,8 @@ let currentQuestion;
 let response;
 let responseColor = 'green';
 let heading;
+let numRight = 0;
+let numWrong = 0;
 let statements = [
     { question: 'What is the name of the Simpson\'s dog?', answer: 'Santa\'s Little Helper' },
     { question: 'Who is the most famous pug?', answer: 'Doug the Pug' },
@@ -21,7 +23,6 @@ function next() {
     const randomIndex = Math.ceil(Math.random() * statements.length - 1);
     return statements[randomIndex];
 }
-
 function checkQuestion() {
     if (currentQuestion.answer === questionInput.value()) {
         // remove correct answer from array
@@ -31,21 +32,39 @@ function checkQuestion() {
         // this is the correct condition
         response = 'That is correct! Try the next question.';
         responseColor = 'green';
+        numRight++;
     } else {
         // this is the wrong answer condition
         response = 'Sorry, wrong answer. Try again.';
         responseColor = 'darkred';
+        numWrong++;
     }
     currentQuestion = next();
     questionInput.value('');
     if (currentQuestion) {
         message = currentQuestion.question;
     }
+    preload();
+    endQuiz();
 }
 
 currentQuestion = next();
 let message = currentQuestion.question;
-
+function endQuiz() {
+    if (numRight === 5) {
+        alert('Congratulations! You know your dogs!');
+        numRight = 0;
+        numWrong = 0;
+        response = '';
+    } else if (numWrong === 5) {
+        alert('Better luck next time.');
+        numRight = 0;
+        numWrong = 0;
+        response = '';
+    }
+}
+function preload() {
+}
 function setup() {
     createCanvas(800, 600);
     heading = createElement('h1', ['Famous Dog Trivia']);
@@ -64,9 +83,12 @@ function draw() {
     background('lightgrey');
     fill('black');
     textSize(24);
-    text(message, 190, 180);
+    text(message, 200, 180);
     fill(responseColor);
-    text(response, 190, 300);
+    text(response, 200, 300);
+    fill('black');
+    textSize(16);
+    text('Right: ' + numRight + '     Wrong: ' + numWrong, 205, 335);
 }
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;

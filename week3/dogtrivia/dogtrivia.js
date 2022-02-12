@@ -79,7 +79,7 @@ function draw() {
     background('lightgrey');
     fill('black');
     textSize(24);
-    text(message, 210, 180);
+    text(message, 210, 180); mnbhhh
     fill(responseColor);
     text(response, 210, 300);
     fill('black');

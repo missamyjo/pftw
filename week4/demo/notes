@@ -1,0 +1,42 @@
+//
+let vs const
+
+const somethingStable =  17;
+remains constant for duration of script , 
+    not going to change or be reassigned to anything 
+let score = 1; 
+as an example, score is going to change, go up
+
+object with propertes and values
+const gameState = {
+    score: 1, 
+    isRunning: true, 
+    timer: 500
+    };
+versus
+    gameState.score = 2;
+
+//
+p5js is a library that runs on top of Javascript
+DOM document object model
+    document    
+    body
+    document.body.style.background = "red"
+    children (array like, indexes just like an array)
+        0: <h1>
+        1: <div class="target-div">
+        2: 
+    document.getElementsbyClassName('target-div')
+    document.querySelector('.target-div')
+let myPara = document.createElement('p');
+myPara.innerHTML = "Howdy"
+document.querySelector('.target-div').appendChild(myPara)
+    *can do in either console and javascript - does same thing
+
+2 main functions:
+function setup() {
+
+}
+function draw() { // draw happens over and over 
+
+}

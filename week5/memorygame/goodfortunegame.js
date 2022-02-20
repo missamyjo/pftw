@@ -1,7 +1,7 @@
 const DOWN = 'down';
 const UP = 'up';
-let startingX = 100;
-let startingY = 130;
+let startingX = 50;
+let startingY = 75;
 let cards = [];
 const gameState = {
     totalPairs: 8,
@@ -13,7 +13,6 @@ const gameState = {
 let cardfaceArray = [];
 let cardback;
 
-//load in images
 function preload() {
     fontRegular = loadFont('fonts/Wayfarer-Regular.otf');
     cardback = loadImage('images/cardback_reversed.png');
@@ -31,7 +30,7 @@ function preload() {
 
 
 function setup() {
-    createCanvas(1075, 1250);
+    createCanvas(950, 1050);
 
 
     let selectedFaces = [];
@@ -40,7 +39,6 @@ function setup() {
         const face = cardfaceArray[randomIdx];
         selectedFaces.push(face);
         selectedFaces.push(face);
-        //remove the used cardface so it doesn't get randomly selected again
         cardfaceArray.splice(randomIdx, 1);
     }
     selectedFaces = shuffleArray(selectedFaces);
@@ -50,8 +48,8 @@ function setup() {
             cards.push(new Card(startingX, startingY, cardFaceImg));
             startingX += 220;
         }
-        startingY += 250
-        startingX = 100;
+        startingY += 225;
+        startingX = 50;
     }
 }
 
@@ -60,8 +58,8 @@ function draw() {
     if (gameState.numMatched === gameState.totalPairs) {
         fill('black');
         textFont(fontRegular);
-        textSize(30);
-        text('You have won Good Fortune!', 400, 1170);
+        textSize(21);
+        text('You have won Good Fortune!', 500, 1000);
         noLoop();
     }
     for (let b = 0; b < cards.length; b++) {
@@ -75,16 +73,16 @@ function draw() {
     gameState.waiting = false;
     fill('black');
     textFont(fontRegular);
-    textSize(69);
-    text('GOOD FORTunE GamE', 100, 80);
+    textSize(60);
+    text('GOOD FORTunE GamE', 50, 50);
     fill('black');
     noStroke();
-    rect(100, 1120, 200, 75);
+    rect(50, 970, 200, 65);
     fill('white');
     textFont()
     textSize(20);
-    text('attempts - ' + gameState.attempts, 120, 1150);
-    text('matches - ' + gameState.numMatched, 120, 1175);
+    text('attempts - ' + gameState.attempts, 65, 997);
+    text('matches - ' + gameState.numMatched, 65, 1020);
 
 }
 
@@ -94,7 +92,6 @@ function mousePressed() {
         return;
     }
     for (let k = 0; k < cards.length; k++) {
-        //first check flipped cards length, and then we can trigger the flip
         if (gameState.flippedCards.length < 2 && cards[k].didHit(mouseX, mouseY)) {
             console.log('flipped', cards[k]);
             gameState.flippedCards.push(cards[k]);
@@ -122,8 +119,8 @@ class Card {
     constructor(x, y, cardFaceImg) {
         this.x = x;
         this.y = y;
-        this.width = 200;
-        this.height = 200;
+        this.width = 150;
+        this.height = 150;
         this.face = DOWN;
         this.cardFaceImg = cardFaceImg;
         this.isMatch = false;

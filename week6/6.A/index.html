@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llama Facts</title>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+</head>
+
+<body>
+    <div id="llama-facts">
+        <ul>
+            <h1> {{header}} </h1>
+            <img src="images/curlyhairllama.jpg">
+            <li v-for="(item, index) in items">
+                {{ parentMessage }} {{ item.message }}
+            </li>
+            <p v-if="false">Llamas are gross.</p>
+            <p v-else>Llamas are so awesome!</p>
+        </ul>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

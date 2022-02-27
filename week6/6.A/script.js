@@ -4,6 +4,7 @@ var llamaFacts = new Vue({
     data: {
         header: "10 Things About Llamas!",
         parentMessage: 'Llamas',
+        baby: 'Cria',
         items: [
             { message: 'are vegetarians.' },
             { message: 'have a lifespan of 20 years.' },

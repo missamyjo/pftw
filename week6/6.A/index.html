@@ -16,8 +16,8 @@
             <li v-for="(item, index) in items">
                 {{ parentMessage }} {{ item.message }}
             </li>
-            <p v-if="false">Llamas are gross.</p>
-            <p v-else>Llamas are so awesome!</p>
+            <p v-if="baby === 'Cria'">A baby llama is called a "cria" which is Spanish for baby.</p>
+            <p v-else>A baby llama is not called anything.</p>
         </ul>
 
     </div>

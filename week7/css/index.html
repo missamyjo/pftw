@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS styles</title>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
+    <script src="https:unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <h1>STYLES</h1>
+    <div id="App" v-cloak>
+        <nav>
+            <ul>
+                <li v-bind:class="{active: currentRoute==='home'}"><a href="#">Home</a></li>
+                <li v-bind:class="{active: currentRoute==='products'}"><a href="#">Products</a></li>
+                <li v-bind:class="{active: currentRoute==='services'}"><a href="#">Services</a></li>
+                <!--                 <li v-bind:style="[baseStyle, overRideStyle]"><a href="#">Services</a></li>
+ -->
+                <li v-bind:class="{active: currentRoute==='clients'}"><a href="#">Clients</a></li>
+                <li v-bind:class="{active: currentRoute==='contact'}"><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

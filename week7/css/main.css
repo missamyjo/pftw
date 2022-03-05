@@ -1,0 +1,38 @@
+[v-cloak] {
+    display: none;
+  }
+  nav  {
+    font-family: Verdana, Verdana, Geneva, Tahoma, sans-serif;
+  }
+  nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  }
+
+  nav li {
+      flex: 1 1;
+      height: 2rem;
+      background: #eeeeee;
+      margin: 0;
+      border-bottom: 1px solid #dddddd;
+  }
+
+  nav li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #000000;
+        text-decoration: none;
+        text-align: center;
+        line-height: 2rem;
+  }
+  nav li a:hover {
+      background-color: #bbbbbb;
+  }
+  nav li.active {
+      border-bottom: 1px solid #000000;
+      background-color: lightblue;
+  }
+  

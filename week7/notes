@@ -1,0 +1,94 @@
+<body>
+<div id="myApp">
+<h1>Hello Vue 3</h1?
+<a :href="myAwesomeUrl" :title="linkTitle">Link</a>
+<a v-bind:href="myAwesomeUrl" 
+</div>
+
+class binding      
+//bind v-bind - values inside of our data function 
+<h1 v-bind:class="{dude: false, 'light-mode': true}
+// object {} first part of the object is the class name to be applied  
+<p v-bind:style=:"paragraphStyle">This thing is a paragraph.</p>
+// css applied directly to the tag with the Style attribute 
+//loop through an object
+<h3>Things I Like</h3>
+<ul>
+<li v-for="value in thingsILike"></li>
+</ul>
+//loop through array with cards
+<li v-for="card in cards" v-bind:class="{non-creature': card.type !== 'Creature'}">{{card.name}}, {{card.type}}</li>
+</ul>
+//v-for will take the html element and create a copyt for each one inside of the card array 
+ //   card represents object in this array 
+//v-bind: class what we want to happen then the condition then the bind what comes back from the card type only apply this where the card type doesnt = creature 
+
+
+Vue.createApp({
+    data() {
+        return {
+            myAwesomeUrl: "https://nintendo.com",
+            linkTitle: "nintendo"
+            preferredMode:'dark'
+            paragraphStyle: {
+                font-size: "36px", // doesn't work without the quotes
+                color: "blue"
+            },
+            thingsILike: {
+                food: "Peanut Butter",
+                color: "Orange",
+                music: "jpop",
+                movies: "sci fi"
+            },
+            ///loop over arrays // square bracket defines array 
+            cards: [ 
+                {
+                    name: "Accursed Witch",
+                    type: "Creature",
+                    text: "blah blah"
+                },
+                 {
+                    name: "Yoshi",
+                    type: "Creature",
+                    text: "blah blah"
+                },
+                 {
+                    name: "Mambo",
+                    type: "Creature",
+                    text: "blah blah"
+                },
+                 {
+                    name: "Counterspell",
+                    type: "Instant",
+                    text: "blah blah"
+                },
+            ]
+        }
+    }
+}).mount("myApp");
+
+
+//css
+.dark-mode {
+    background: 
+}
+.light-mode {
+    background: #fff;
+    color: #000;
+}
+.dude {
+    color: #ccc;
+}
+li {
+    background: purple;
+    color: white;
+}
+.non-creature {
+    background: yellow;
+    color: black;
+}
+
+quiz - multiple choice 
+attribute binding
+class and style binding
+v-binding 

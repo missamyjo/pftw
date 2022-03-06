@@ -1,0 +1,44 @@
+/* Add your styles here */
+[v-cloak] {
+  display: none
+}
+body {
+  background: bisque;
+  margin: 0;
+}
+html { 
+  font-family: 'Courier New', Courier, monospace;
+}
+.llama-list-title {
+  border-bottom: 1px solid black;
+  margin: 80px;
+  text-align: center;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.list-container {
+  padding: 7px;
+}
+
+.list-head .rank, .list-head .name {
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+  font-size: 1.6em;
+  color:black;
+  padding-bottom: .2rem;
+}
+
+.odd {
+  background: lightblue;
+  padding: 10px;
+}
+
+.even {
+  background: tan;
+  padding: 10px;
+}
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>llama names</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <div id="llama-list" v-cloak>
+        <h1 class="llama-list-title">What to name your next llama</h1>
+        <div class="list-container">
+            <div class="list-head">
+                <span class="rank">Rank</span>
+                <span class="name">Name</span>
+            </div>
+        </div>
+
+        <div v-for="(llama, index) in llamas" v-bind:class="{even: (index + 1) % 2 === 0, odd: (index + 1) % 2 !==0}">
+            <div class="list-head">
+                <span class="rank">{{llama.rank}}</span>
+                <span class="name"
+                    v-bind:class="{special: llama.name.toLowerCase().includes('llama')}">{{llama.name}}</span>
+            </div>
+        </div>
+    </div>
+    <script src="llamas.js"></script>
+</body>
+
+</html>

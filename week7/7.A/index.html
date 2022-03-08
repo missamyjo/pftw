@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my pez collection</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <h1>My PEZ Collection</h1>
+    <div class="container">
+        <div id="app" v-cloak>
+            <table>
+                <tr>
+                    <th>Pez Face</th>
+                    <th>Pez Name</th>
+                    <th>Backing Card?</th>
+                    <th>Made In</th>
+                    <th>Year</th>
+                    <th>How Many?</th>
+                </tr>
+                <tr v-for="(pez, index) in pez" v-bind:class="{even: (index + 1) % 2 === 0, odd: (index + 1) % 2 !==0}">
+                    <td><img :src="pez.pezFace"></td>
+                    <td>{{pez.pezName}}</td>
+                    <td>{{pez.backingCard}}</td>
+                    <td>{{pez.madeIn}}</td>
+                    <td>{{pez.pezYear}}</td>
+                    <td>{{pez.pezQuantity}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

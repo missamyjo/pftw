@@ -1,0 +1,10 @@
+
+{name: 'White', value: 'white'},
+{name: 'Beige', value: 'beige'},
+{name: 'Fawn (light, medium, dark)', value: 'fawn'},
+{name: 'Brown (light, medium, dark)', value: 'brown'},
+{name: 'Bat Black', value: 'bay-black'},
+{name: 'True Black', value: 'true-black'},
+{name: 'Rose Grey (light, medium, dark)', value: 'rose-grey'},
+{name: 'Silver Grey (light, medium, dark)', value: 'silver-grey'},
+

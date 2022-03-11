@@ -1,10 +1,26 @@
+body {
+background-color: tan;
+font-family: 'Courier New', Courier, monospace;
+}
+legend {
+    font-size: 1.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: darkred;
+}
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
 form {
     width: 100%
     max-width: 300px;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 div {
     margin: 10px 0;
+    padding: 0 10px;
     display: flex;
 }
 div.alpaca-status,
@@ -26,3 +42,8 @@ ul {
 li {
     margin: 5px 0;
 }
+fieldset {
+    border: 1px solid darkred;
+    border-radius: .5rem;
+    padding: 1rem;;
+  }

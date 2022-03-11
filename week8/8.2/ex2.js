@@ -1,4 +1,4 @@
-let vm = Vue.createApp({
+const vm = Vue.createApp({
     data() {
         return {
             firstNum: null,

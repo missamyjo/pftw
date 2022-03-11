@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="https:unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <h1>calculator</h1>
+    <container>
+        <div id="calcApp">
+            <form>
+                <div>
+                    <input v-model.number="firstNum" type="number" placeholder="number">
+                    <select v-model="operation">
+                        <option value="add">+</option>
+                        <option value="subtract">-</option>
+                        <option value="multiply">&times;</option>
+                        <option value="divide">&divide;</option>
+                    </select>
+                    <input v-model.number="secondNum" type="number" placeholder="number">
+
+                    <button v-on:click="calculate(firstNum, secondNum)" type="button">Calculate</button>
+                </div>
+            </form>
+            <div class="total">
+                Total: <strong>{{total}}</strong>
+            </div>
+        </div>
+    </container>
+    <script src="ex2.js"></script>
+</body>
+
+</html>

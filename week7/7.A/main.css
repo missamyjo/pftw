@@ -30,7 +30,7 @@ img {
 td {
   display: table-cell;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 table {
   border-spacing: 3px;

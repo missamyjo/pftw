@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitioning from Vue 2 to Vue 3</title>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
+    <script src="https:unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <div id="myApp" v-cloak>
+        <!-- put in css [v-cloak] { display: none } -->
+        {{greeting}}
+        <div v-if="location==='here'">You are here</div>
+        <div v-if="location==='there'">You are there</div>
+    </div>
+    <div id="app" v-cloak>
+        <h1>Attribute Binding</h1>
+        <a v-bind:href="happyLand">My link</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

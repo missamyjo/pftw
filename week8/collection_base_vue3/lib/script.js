@@ -72,8 +72,7 @@ const vm = Vue.createApp({
         deleteItem: item => {
           vm.consoles = vm.consoles.filter(console => {
             return console !== item;
-          });
+          };
         }
-
       }
     }).mount("#app");

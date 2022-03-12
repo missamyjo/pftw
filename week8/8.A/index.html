@@ -32,6 +32,32 @@
                 </tr>
             </table>
         </div>
+        <form v-on:submit="submitHandler" class="new-pez-form">
+            <fieldset>
+                <legend>Add a Pez to the collection</legend>
+                <div>
+                    <div>
+                        <label for="pezFace">Pez Face</label>
+                        <input id="pezFace" type="text" v-model="newPezObj.pezFace">
+                    </div>
+                    <label for="pezName">Pez Name</label>
+                    <input id="name" type="text" v-model="newPezObj.name">
+                </div>
+                <div>
+                    <label for="backingCard">Backing Card?</label>
+                    <input id="backingCard" type="checkbox" v-model="newConsoleObj.backingCard">
+                </div>
+                <div>
+                    <label for="pezYear">Made In</label>
+                    <input id="pezYear" type="date" v-model="newConsoleObj.pezYear">
+                </div>
+                <div>
+                    <label for="pezQuantity">Quantity</label>
+                    <input id="pezQuantity" type="text" v-model="newConsoleObj.pezQuantity">
+                </div>
+            </fieldset>
+            <button type="submit">Submit your Pez!</button>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>

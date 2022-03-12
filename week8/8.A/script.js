@@ -1,6 +1,14 @@
 Vue.createApp({
     data() {
         return {
+            newPezObj: {
+                pezFace: '',
+                pezName: '',
+                backingCard: false,
+                madeIn: '',
+                pezYear: 'null',
+                pezQuantity: '',
+            },
             pez: [
                 {
                     pezName: "Wonder Woman",
@@ -67,6 +75,19 @@ Vue.createApp({
                     pezQuantity: "1",
                 },
             ]
+        }
+    },
+    methods: {
+        handleSubmit() {
+            const newPezObj = {
+                face: this.pezFace,
+                name: this.pezName,
+                card: this.backingCard,
+                made: this.madeIn,
+                year: this.pezYear,
+                quantity: this.pezQuantity
+            };
+            this.pez.push(newPezObj);
         }
     }
 }).mount("#app");

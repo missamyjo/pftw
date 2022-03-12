@@ -12,10 +12,8 @@ h1 {
      text-align: center;
 }
 body {
-  background: hotpink;
-}
-body { 
   font-family: 'Courier New', Courier, monospace;
+  background: hotpink;
 }
 img {
   max-width: 200px;
@@ -25,16 +23,15 @@ img {
   text-align: center;
   font-size: 1.4em;
   color:black;
-  margin-left: 22rem;
 }
 td {
-  display: table-cell;
   padding: 1rem;
   border-radius: 20px;
 }
 table {
   border-spacing: 3px;
-
+  width: 1017px;
+  margin: 0 auto;
 }
 .odd {
   background: ivory;
@@ -42,6 +39,3 @@ table {
 .even {
   background: linear-gradient(yellowgreen, yellow);
 }
-
-
-

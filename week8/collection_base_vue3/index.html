@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 8</title>
+  <link rel="stylesheet" href="lib/style.css">
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+  <h1>Video Game Consoles (collected and not collected)</h1>
+  <div id="app">
+    <div class="collectionWrapper">
+      <div class="collectionRow header">
+        <div class="cell console-manufacture">manufacture</div>
+        <div class="cell console-name">Console Name</div>
+        <div class="cell release-date">Console Release Date</div>
+        <div class="cell console-image">Image</div>
+        <div class="cell collected">Part of the collection</div>
+        <div class="cell actions">Actions</div>
+      </div>
+      <div class="collectionRow" v-for="(console, index) in consoles"
+        v-bind:class="{odd: index % 2 !== 0, owned: console.collected}">
+        <div class="cell console-manufacture">{{console.manufacture}}</div>
+        <div class="cell console-name">{{console.name}}</div>
+        <div class="cell release-date">{{console.releaseDate}}</div>
+        <div class="cell console-image"><img :src="console.image" :alt="console.name" /></div>
+        <div class="cell collected">{{console.collected}}</div>
+        <div class="cell actions">
+          <button type="button" v-on:click="deleteItem (console)">Delete</button>
+        </div>
+      </div>
+    </div>
+    <form v-on:submit="submitHandler" class="new-console-form">
+      <fieldset>
+        <legend>Add a console to the collection</legend>
+        <div>
+          <label for="manufacture">Manufacturer</label>
+          <input id="manufacture" type="text" v-model="newConsoleObj.manufacture">
+        </div>
+        <div>
+          <label for="name">Console Name</label>
+          <input id="name" type="text" v-model="newConsoleObj.name">
+        </div>
+        <div>
+          <label for="release-date">Release Date</label>
+          <input id="release-date" type="date" v-model="newConsoleObj.release-date">
+        </div>
+        <div>
+          <label for="image">Image</label>
+          <input id="iamge" type="text" v-model="newConsoleObj.image">
+        </div>
+        <div>
+          <label for="collected">Owned</label>
+          <input id="collected" type="checkbox" v-model="newConsoleObj.collected">
+        </div>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+  <script src="lib/script.js"></script>
+</body>
+
+</html>

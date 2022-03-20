@@ -1,4 +1,4 @@
-Vue.createApp({
+const vm = Vue.createApp({
     data() {
         return {
             newPezObj: {
@@ -78,16 +78,25 @@ Vue.createApp({
         }
     },
     methods: {
-        handleSubmit() {
-            const newPezObj = {
-                face: this.pezFace,
-                name: this.pezName,
-                card: this.backingCard,
-                made: this.madeIn,
-                year: this.pezYear,
-                quantity: this.pezQuantity
+        submitHandler: () => {
+            console.log('submitted');
+            vm.pez = vm.pez.concat(vm.newPezObj);
+            vm.resetForm();
+        },
+        resetForm: () => {
+            vm.newPezObj = {
+                pezFace: '',
+                pezName: '',
+                backingCard: false,
+                madeIn: '',
+                pezYear: 'null',
+                pezQuantity: '',
             };
-            this.pez.push(newPezObj);
+        },
+        deletePez: item => {
+            vm.pez = vm.pez.filter(pez => {
+                return pez !== item;
+            })
         }
     }
 }).mount("#app");

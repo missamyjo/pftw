@@ -4,9 +4,9 @@ const vm = Vue.createApp({
             newPezObj: {
                 pezFace: '',
                 pezName: '',
-                backingCard: false,
+                backingCard: '',
                 madeIn: '',
-                pezYear: 'null',
+                pezYear: '',
                 pezQuantity: '',
             },
             pez: [
@@ -87,9 +87,9 @@ const vm = Vue.createApp({
             vm.newPezObj = {
                 pezFace: '',
                 pezName: '',
-                backingCard: false,
+                backingCard: '',
                 madeIn: '',
-                pezYear: 'null',
+                pezYear: '',
                 pezQuantity: '',
             };
         },

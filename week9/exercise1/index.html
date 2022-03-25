@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed Props</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <div id="app">
+        <label>First Name<input v-model="firstName" type="text"></label>
+        <label>Last Name<input v-model="lastName" type="text"></label>
+        <p>{{fullName}}</p>
+        <p>{{now}}</p>
+        <p>{{newNow()}}</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

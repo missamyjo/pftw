@@ -187,11 +187,15 @@ h1 {
   font-size: 65px;
   text-align: center;
 }
+img {
+  height: 200px;
+  width: 200px;
+}
 .app-wrapper {
-  font-family: "Courier New", Courier, monospace;
   background: hotpink;
 }
 .collection-wrapper {
+  font-family: "Courier New", Courier, monospace;
   width: 100%;
   text-align: center;
   font-size: 1.4em;

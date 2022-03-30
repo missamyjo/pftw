@@ -131,7 +131,7 @@ function handleDelete(itemToDelete) {
           v-on:delete-item="handleDelete"
         />
       </table>
-      <form v-on:submit.prevent="submitHandler" class="new-pez-form">
+      <form v-on:submit.prevent="addNewPez" class="new-pez-form">
         <fieldset>
           <legend>Add a Pez to the collection!</legend>
           <div>

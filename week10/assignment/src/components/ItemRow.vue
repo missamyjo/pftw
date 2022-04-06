@@ -4,24 +4,25 @@ const props = defineProps(["item", "index"]);
 console.log("the item", props.item);
 </script>
 <template>
-  <RouterLink :to="'/collection/' + item.id">
-    <tr
-      class="collectionRow"
-      v-bind:class="{
-        collectionRow: true,
-        even: (index + 1) % 2 === 0,
-        odd: (index + 1) % 2 !== 0,
-      }"
-    >
-      <td><img :src="item.pezFace" /></td>
-      <td>{{ item.pezName }}</td>
-      <td>{{ item.backingCard }}</td>
-      <td>{{ item.madeIn }}</td>
-      <td>{{ item.pezYear }}</td>
-      <td>{{ item.pezQuantity }}</td>
-      <td>{{ item.id }}</td>
-    </tr>
-  </RouterLink>
+  <tr
+    class="collectionRow"
+    v-bind:class="{
+      collectionRow: true,
+      even: (index + 1) % 2 === 0,
+      odd: (index + 1) % 2 !== 0,
+    }"
+  >
+    <td>
+      <RouterLink :to="'/collection/' + item.id"
+        ><img :src="item.pezFace"
+      /></RouterLink>
+    </td>
+    <td>{{ item.pezName }}</td>
+    <td>{{ item.backingCard }}</td>
+    <td>{{ item.madeIn }}</td>
+    <td>{{ item.pezYear }}</td>
+    <td>{{ item.pezQuantity }}</td>
+  </tr>
 </template>
 <style scoped>
 body {

@@ -5,7 +5,26 @@ console.log(PezList);
 </script>
 <template>
   <h1>My Pez Collection</h1>
-  <ItemRow v-for="(item, index) in PezList" :key="index" :item="item" />
+  <table>
+    <thead>
+      <tr>
+        <th>Pez Face</th>
+        <th>Pez Name</th>
+        <th>Backing Card?</th>
+        <th>Made In</th>
+        <th>Year</th>
+        <th>How Many?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ItemRow
+        v-for="(item, index) in PezList"
+        :key="index"
+        :item="item"
+        :index="index"
+      />
+    </tbody>
+  </table>
 </template>
 <style scoped>
 @font-face {

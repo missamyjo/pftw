@@ -12,5 +12,18 @@ const item = PezList.find((item) => {
 <template>
   <h1>{{ item.pezName }}</h1>
   <img :src="item.pezFace" :alt="item.pezName" />
-  <p>{{ item.madeIn }}</p>
+  <p>Backing Card? {{ item.backingCard }}</p>
+  <p>Made In: {{ item.madeIn }}</p>
+  <p>Year: {{ item.pezYear }}</p>
+  <p>How Many? {{ item.pezQuantity }}</p>
 </template>
+<style scoped>
+img {
+  background: white;
+  height: 400px;
+  width: 400px;
+  padding: 1rem;
+  border: dashed 3px;
+  border-radius: 12px;
+}
+</style>

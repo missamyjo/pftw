@@ -1,0 +1,31 @@
+
+h1, h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+h3, nav {
+font-family: monospace;
+text-transform: uppercase;
+}
+body {
+  background: rgba(184, 184, 184, 0.445);
+  width: 100%;
+  text-align: center;
+  font-size: 1.4em;
+  color: black;
+}
+img {
+  max-height: 200px;
+  max-width: 300px;
+  padding: 0 1rem 1rem 1rem;
+  border-bottom: solid 3px;
+}
+a {
+    color: rgb(0, 0, 255);
+    text-decoration: none;
+  }
+  a:hover {
+    color: magenta;
+    text-decoration: none;
+  }

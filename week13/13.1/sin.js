@@ -1,4 +1,4 @@
-// Colorful Coding - Simple sine wave animation in p5.js | Coding Project #11 https://www.youtube.com/watch?v=ktPnruyC6cc
+// adaptation Colorful Coding - Simple sine wave animation in p5.js | Coding Project #11 https://www.youtube.com/watch?v=ktPnruyC6cc
 
 function setup() {
     createCanvas(windowWidth, windowHeight)
@@ -20,7 +20,7 @@ function draw() {
         // the value you multiply with represents a number of degrees
         // if it is 100, the squares will spin between -100 and 100 degrees
         // try experimenting with the offset 
-        rotate(sin(frameCount + i / 3) * 340)
+        rotate(sin(frameCount + i * 1.5) * 200)
 
         // add some color 
         // can also use the sin and cos functions for this 

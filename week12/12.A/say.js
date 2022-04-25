@@ -8,10 +8,13 @@ var keyStates = [0, 0, 0, 0, 0, 0, 0, 0];
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    colorMode(HSB, 255);
-    stroke(255);
     strokeWeight(7);
     synth = new p5.PolySynth();
+    button = createButton("START");
+    button.mouseClicked(playSynth);
+    button.size(100, 100);
+    button.position(56, 70);
+
 }
 
 function draw() {
@@ -24,7 +27,7 @@ function draw() {
             keyColor = color('#038C9E');
         }
         fill(keyColor);
-        stroke(255);
+        stroke(8, 8, 8);
         rect(i * keyWidth, 0, keyWidth, height);
         fill(255);
         noStroke();
@@ -32,7 +35,6 @@ function draw() {
 
     }
 }
-
 function keyPressed() {
     var keyIndex = keyOrder.indexOf(key);
     if (keyIndex >= 0) {
@@ -42,7 +44,9 @@ function keyPressed() {
         synth.noteAttack(freq, velocity, 0);
     }
 }
-
+function playSynth() {
+    userStartAudio();
+}
 function keyReleased() {
     var keyIndex = keyOrder.indexOf(key);
     if (keyIndex >= 0) {
@@ -52,7 +56,6 @@ function keyReleased() {
         synth.noteRelease(freq, 0);
     }
 }
-
 function touchStarted() {
     var keyWidth = width / keyStates.length;
     var keyIndex = floor(mouseX / keyWidth);

@@ -1,4 +1,4 @@
-// adaptation Colorful Coding - Simple sine wave animation in p5.js | Coding Project #11 https://www.youtube.com/watch?v=ktPnruyC6cc
+// adaptation tutorial Colorful Coding - Simple sine wave animation in p5.js | Coding Project #11 https://www.youtube.com/watch?v=ktPnruyC6cc
 
 function setup() {
     createCanvas(windowWidth, windowHeight)

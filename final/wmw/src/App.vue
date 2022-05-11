@@ -15,10 +15,30 @@ import { RouterLink, RouterView } from "vue-router";
 </template>
 
 <style>
+@font-face {
+  font-family: "RobotoSlab";
+  src: local("RobotoSlab"),
+    url(src/assets/fonts/RobotoSlab-Bold.TTF) format("truetype");
+}
+@font-face {
+  font-family: "ZenKakuGothicNew-Black";
+  src: local("ZenKakuGothicNew"),
+    url(src/assets/fonts/ZenKakuGothicNew-Black.TTF) format("truetype");
+}
+@font-face {
+  font-family: "ZenKakuGothicNew-Regular";
+  src: local("ZenKakuGothicNew"),
+    url(src/assets/fonts/ZenKakuGothicNew-Regular.TTF) format("truetype");
+}
+
 html {
-  font-size: 16px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background: black;
+}
+h1 {
+  font-family: "RobotoSlab";
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 #app,
 body {
@@ -26,10 +46,14 @@ body {
   padding: 0;
 }
 nav {
+  font-family: "ZenKakuGothicNew-Black";
+  text-transform: uppercase;
   width: 100%;
   height: 45px;
   background: white;
   text-align: center;
+  border: solid white 3px;
+  border-radius: 3px;
 }
 nav a,
 nav a:hover,
@@ -46,21 +70,10 @@ nav a.router-link-active {
   color: #f51e26;
 }
 .container {
-  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   padding: 20px;
-}
-.container h1 {
   text-align: center;
-  font-size: 48px;
-  color: white;
-}
-.container p,
-h3 {
-  width: 800px;
-  font-size: inherit;
-  padding: 0 100px;
 }
 .container img {
   display: block;
@@ -70,8 +83,8 @@ h3 {
 }
 footer {
   display: block;
-  max-width: 400px;
+  max-width: 340px;
   width: 100%;
-  margin: 40px auto 20px;
+  margin: 40px auto;
 }
 </style>

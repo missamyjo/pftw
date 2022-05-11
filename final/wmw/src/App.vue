@@ -7,7 +7,7 @@ import { RouterLink, RouterView } from "vue-router";
     <RouterView></RouterView>
     <footer>
       <img
-        src="src/assets/img/footer_black_crop.jpg"
+        src="./assets/img/footer_black_crop.jpg"
         alt="who made who studio address"
       />
     </footer>
@@ -18,17 +18,17 @@ import { RouterLink, RouterView } from "vue-router";
 @font-face {
   font-family: "RobotoSlab";
   src: local("RobotoSlab"),
-    url(src/assets/fonts/RobotoSlab-Bold.TTF) format("truetype");
+    url(./assets/fonts/RobotoSlab-Bold.TTF) format("truetype");
 }
 @font-face {
   font-family: "ZenKakuGothicNew-Black";
   src: local("ZenKakuGothicNew"),
-    url(src/assets/fonts/ZenKakuGothicNew-Black.TTF) format("truetype");
+    url(./assets/fonts/ZenKakuGothicNew-Black.TTF) format("truetype");
 }
 @font-face {
   font-family: "ZenKakuGothicNew-Regular";
   src: local("ZenKakuGothicNew"),
-    url(src/assets/fonts/ZenKakuGothicNew-Regular.TTF) format("truetype");
+    url(./assets/fonts/ZenKakuGothicNew-Regular.TTF) format("truetype");
 }
 
 html {
